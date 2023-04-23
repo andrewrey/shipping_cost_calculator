@@ -1,4 +1,4 @@
-import cost_dictionaries as dc
+# import cost_dictionaries as dc
 
 def cost_finder(ground,g_premium, drone, weight):
     key_finder = 0
@@ -35,6 +35,6 @@ def cost_finder(ground,g_premium, drone, weight):
 
 
 
-price = cost_finder(dc.ground_shipping_dict,dc.ground_shipping_premium, dc.drone_shipping_dict, 15)
+# price = cost_finder(dc.ground_shipping_dict,dc.ground_shipping_premium, dc.drone_shipping_dict, 15)
 
-print (price)
+# print (price)
