@@ -10,10 +10,22 @@ def cost_finder():
     cheapest_price = 0
     
     for key, value in shipping_cost_dict.items():
-        print(value)
+        if cheapest_price == 0:
+            cheapest_price = value
+            cheapest_option = key
+        else:
+            if value < cheapest_price:
+                cheapest_price = value
+                cheapest_option = key 
     
-    
-    return shipping_cost_dict
+    output_message = f"Weight of item: {inputed_weight}\nGround Shipping Price: {shipping_cost_dict['ground']}\nGround Shipping Premium Price: {shipping_cost_dict['premium']}\nDrone Shipping Price: {shipping_cost_dict['drone']}"
+    if cheapest_option == "ground":
+        output_message += f"\nThe cheapest option is Ground shipping at a price of ${cheapest_price}."
+    elif cheapest_option == "premium":
+        output_message += f"\nThe cheapest option is Premium Ground Shipping at a price of ${cheapest_price}."
+    else:
+        output_message += f"\nThe cheapest option is Drone Shipping at a price of ${cheapest_price}."
+    return output_message
 
 
 print(cost_finder())

@@ -30,7 +30,7 @@ def cost_finder(ground,g_premium, drone, weight):
     return {
         "ground": ground_price,
         "premium": premium_price,
-        "drone_price": drone_price
+        "drone": drone_price
     }
 
 
